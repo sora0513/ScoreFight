@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UITableViewController
+{
+    NSArray *_users;
+}
+
+@property (retain, nonatomic) NSArray *users;
 
 @end

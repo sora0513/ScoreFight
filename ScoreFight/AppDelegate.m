@@ -12,6 +12,8 @@
 
 #import "SecondViewController.h"
 
+#import <Parse/Parse.h>
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -26,6 +28,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // *** parse のアプリケーション ID を設定
+    [Parse setApplicationId:@"****************************************" 
+                  clientKey:@"****************************************"];
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
